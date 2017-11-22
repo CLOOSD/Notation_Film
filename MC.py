@@ -9,7 +9,7 @@ UserId = [elt for elt in don_ratings.userId]
 MovieId = [elt for elt in don_ratings.movieId]
 Rating = [elt for elt in don_ratings.rating]
 
-M_Coeur = [[0 for j in range(len(AllMovieId))] for i in range(UserId[-1]+1)]
+M_Coeur = [[None for j in range(len(AllMovieId))] for i in range(UserId[-1]+1)]
 M_idFix = []
 M_IdMovie = [elt for elt in don_Movie.movieId]
 
@@ -26,7 +26,7 @@ def IdFilm(i):
 
 for i in range(671):
     for elt in M_idFix[i]:
-        M_Coeur[i][IdFilm(elt)]
+        M_Coeur[i].[IdFilm(elt)]
 
 
 print(M_Coeur[610][IdFilm(55820)])
