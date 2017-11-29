@@ -34,7 +34,13 @@ for i in range(len(M_note)):
     for j in range(len(M_note[i])):
         M_Film_User_Note[i+1][IdFilm(M_id[i][j])] = M_note[i][j]
 
-print(M_Film_User_Note[15][IdFilm(1682)])
+def retrouve_note(id_user,id_film):
+    if (id_film in M_id[id_user]) == True:
+        return M_note[id_user][M_id[id_user].index(id_film)]
+    else:
+        print("film non noté")
+        return False
+
 
 
 
