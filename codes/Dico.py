@@ -18,7 +18,10 @@ for IdMovie,value in enumerate(M_IdMovie,1): #film est l'indice du film
     dict_FilmtoMatrice[IdMovie] = value
     dict_MatriceToFilm[value] = IdMovie
     #if film ==0:
-print(dict_FilmtoMatrice)
+
+def index_movie(id_film):
+    return dict_FilmtoMatrice[id_film]
+
 
     #for elt in M_IdMovie:
         #for elt1 in film:
