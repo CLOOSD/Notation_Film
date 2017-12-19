@@ -40,8 +40,44 @@ def Notes(id_User,id_Movie):
     return (M_Film_User_Note[id_User][index_movie(id_Movie)])
 
 
-Notes(1,31)
 #On a bien une Matrice[id_de_l'utilisateur][id_du_film] cette matrice donne la note du film si le film est noté et -1 si le film n'est pas noté cette matrice est un array numpy
+M_Dysn_Thri = []
+M_id_Nom = {}
+def Matrice_D_T(id_Movie,nouvelle_id ,nom_film):
+    M_Dysn_Thri.append([])
+    M_Dysn_Thri.append(0)
+    M_id_Nom[nouvelle_id] = nom_film
+    for i in range(672):
+        M_Dysn_Thri[nouvelle_id].append(Note(i,id_Movie))
+
+
+Matrice_D_T(1029,0,"Dumbo")
+Matrice_D_T(1940,2,"Fantasia")
+Matrice_D_T(596,2,"Pinocchio")
+Matrice_D_T(74089,3,"Peter Pan")
+Matrice_D_T(588,4,"Aladin")
+Matrice_D_T(2018,5,"Bambi")
+Matrice_D_T(81591,6,"Black Swan")
+Matrice_D_T(594,7,"Blanche Neige")
+Matrice_D_T(1022,8,"Cendrillon")
+Matrice_D_T(364,9,"Le Roi Lion")
+Matrice_D_T(1367,10,"Dalmatiens")
+Matrice_D_T(616,11,"Aristochats")
+Matrice_D_T(1023,12,"Winnie L'ourson")
+Matrice_D_T(8961,13,"Indestructible")
+Matrice_D_T(2080,14,"La belle et les clocha")
+Matrice_D_T(47,15,"Seven")
+Matrice_D_T(112556,16,"Gone Girl")
+Matrice_D_T(50,17,"Usual Suspects")
+Matrice_D_T(296,18,"Pulp Fiction")
+Matrice_D_T(2959,19,"Fight Club")
+Matrice_D_T(58559,20,"Batman the Dark knight")
+Matrice_D_T(79132,21,"Inception")
+Matrice_D_T(74458,22,"Shutter Island")
+Matrice_D_T(1089,23,"Reservoir Dogs")
+Matrice_D_T(97304,24,"Argo")
+
+Matrice_D_T = np.asarray(Matrice_D_T)
 
 
 def rmse(prediction, ground_truth):
