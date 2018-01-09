@@ -39,3 +39,4 @@ def index_movie_2(id_film):
 
 #fonction prediction
 #IdFilm.head()
+print(index_movie_2(588))
