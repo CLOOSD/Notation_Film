@@ -59,6 +59,12 @@ for i in range(len(M_note)):
 M_Film_Note_User = np.transpose(M_Film_User_Note)
 
 def Notes(id_User,id_Movie):
+    """
+    Fonction retournant les notes des films
+    :param id_User: id de l'utilisateur (int)
+    :param id_Movie: id du film (int)
+    :return: La note correspondant a l'user et le film (int)
+    """
     return (M_Film_User_Note[id_User][index_movie(id_Movie)])
 
 
@@ -71,6 +77,11 @@ for elt in M_IdMovie_2:         #Matrice contenant 25 films
 # est noté et False si le film n'est pas noté cette matrice est un array numpy
 
 def id_tofilm_test(clust):
+    """
+    Transforme les numéro contenue dans le clustering_test en le nom des films
+    :param clust: le clustering_test effectuer sur le test (array)
+    :return: Une list de list avec les nom des films au lieux des numéro des index des films (array)
+    """
     clust_nom = []
     for i in range(len(clust)):
         clust_nom.append([])
@@ -79,6 +90,11 @@ def id_tofilm_test(clust):
     return clust_nom
 
 def id_tofilm(clust):
+    """"
+    Transforme les numéro contenue dans le clustering en le nom des films
+    :param clust: le clustering effectuer sur le test (array)
+    :return: Une list de list avec les nom des films au lieux des numéro des index des films (array)
+    """
     clust_nom = []
     for i in range(len(clust)):
         clust_nom.append([])

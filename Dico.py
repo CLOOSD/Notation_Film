@@ -25,16 +25,41 @@ for IdMovie_2,value in enumerate(M_IdMovie_2,1): #film est l'indice du film
     dict_FilmtoMatrice_2[IdMovie_2] = value
 
 def index_movie(id_film):
+    """
+    retourne l'index du film
+    :param id_film: id du film (int)
+    :return: index du film (int)
+    """
     return dict_MatriceToFilm[id_film]-1
 
 def index_movie_2(id_film):
+    """
+    retourne l'index du film (fonction pour la matrice test)
+    :param id_film: id du film (int)
+    :return: index du film (int)
+    """
     return dict_MatriceToFilm_2[id_film]-1
 
 def ind_movie(id):
+    """
+    retourne l'id du film
+    :param id: index du film (int)
+    :return: id du film (int)
+    """
     return dict_FilmtoMatrice[id+1]
 
 def ind_movie_2(id):
+    """
+    retourne l'id du film (fonction pour la matrice test)
+    :param id: index du film (int)
+    :return: id du film (int)
+    """
     return dict_FilmtoMatrice_2[id+1]
 
 def nom_film(id_film):
+    """
+    retourne le nom du film
+    :param id_film: id du film (int)
+    :return: nom du film (str)
+    """
     return dict_idFilmtoNom[id_film]

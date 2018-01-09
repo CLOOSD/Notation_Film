@@ -6,6 +6,11 @@ from sklearn.cluster import KMeans
 
 
 def clustering(X):
+    """
+    effectue un cluster
+    :param X: Matrice sur laquel effectuer le cluster (array)
+    :return: une list contenant n clusters (array)
+    """
     model = NMF(n_components=1, init='random', random_state=0)
     W = model.fit_transform(X)
     #print(W)
