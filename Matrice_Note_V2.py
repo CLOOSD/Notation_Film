@@ -104,10 +104,10 @@ def id_tofilm(clust):
 
 if __name__ == '__main__':
     #print("matreice dysthri : " ,M_Dysn_Thri)
-    #cluster = clustering(M_Dysn_Thri)
-    #print(id_tofilm_test(cluster))
-    cluster_big = clustering(M_Film_Note_User)
-    print(id_tofilm(cluster_big))
+    cluster = clustering(M_Dysn_Thri)
+    print(id_tofilm_test(cluster))
+    #cluster_big = clustering(M_Film_Note_User)
+    #print(id_tofilm(cluster_big))
     #M_test = clustering(M_IdMovie2)
     #index_movie_2(M_test)
     #print(M_IdMovie_2)
